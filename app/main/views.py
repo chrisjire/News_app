@@ -6,17 +6,13 @@ from ..models import Sources
 # Views
 @main.route('/')
 def index():
-    
-    '''
-    View root page function that returns the index page and its data
-    '''
+	'''
+	view root page function that returns the index the page and its data
+	'''
+	sources = get_sources('business')
+	sports_sources = get_sources('sports')
+	technology_sources = get_sources('technology')
+	entertainment_sources = get_sources('entertainment')
+	title = "News Highlighter"
 
-    # Getting news
-    top_headlines = get_news('top_headlines')
-    all_articles = get_news('all_articles')
-    sources = get_news('sources')
-    
-    title = 'Home - Welcome to The best News Review Website Online'
-    
-    
-    return render_template('index.html', title = title, top_headlines = top_headlines, all_articles = all_articles, now_showing = sources )
+	return render_template('index.html',title = title, sources = sources,sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
