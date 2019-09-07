@@ -1,14 +1,16 @@
 import os
-from newsapi import NewsApiClient
 
 
 class Config:
     '''
     General configuration parent class
     '''
-    API_BASE_URL = 'https://newsapi.org/v2/sources?apiKey=db4ec7c57e644b949ddf0e238f3c1436'
+    NEWS_SOURCES_BASE_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey=db4ec7c57e644b949ddf0e238f3c1436'
+    ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey=db4ec7c57e644b949ddf0e238f3c1436'
     API_KEY = os.environ.get('API_KEY')
-
+    @staticmethod
+    def init_app(app):
+            pass
 
 
 class ProdConfig(Config):
