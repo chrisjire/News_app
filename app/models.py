@@ -8,3 +8,4 @@ class News:
         self.title = title
         self.overview = overview
         self.poster = 'https://image.tmdb.org/t/p/w500/'+ poster
+
