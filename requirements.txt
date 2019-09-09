@@ -1,6 +1,5 @@
 asn1crypto==0.24.0
 chardet==3.0.4
-cliapp==1.20170827
 Click==7.0
 cmdtest==0.32
 cryptography==2.1.4
@@ -10,7 +9,7 @@ idna==2.6
 ipaddress==1.0.17
 itsdangerous==1.1.0
 Jinja2==2.10.1
-keyring==10.6.0
+keyring==10.6.c
 keyrings.alt==3.0
 Markdown==2.6.9
 MarkupSafe==1.1.1
